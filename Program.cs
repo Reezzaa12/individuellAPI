@@ -1,7 +1,7 @@
 using System;
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
-
+//XCx
 app.MapGet("/", () => "Individuell API");
 //ee
 app.Run();
