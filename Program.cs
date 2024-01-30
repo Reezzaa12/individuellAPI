@@ -3,12 +3,13 @@ var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
 app.MapGet("/", () => "Individuell API");
-//ee
+app.MapGet("/koda", (string text) => CaesarKodar(text));
+app.MapGet("/avkoda", (string text) => CaesarAvkoda(text));q
 app.Run();
 
 
  //metod som tar emot en sträng och returnerar en krypterad sträng
-static string CaesarKoda(string input)
+static string CaesarKodar(string input)
 {
     //variabel som lagrar nyckeln
     int nyckel = 3;
