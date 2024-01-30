@@ -1,10 +1,14 @@
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
-app.MapGet("/", () => "Hello World!");
 
+
+
+
+app.MapGet("/", () => "Individuell API");
+app.MapGet("/koda", (string text) => CaesarKodar(text));
+app.MapGet("/avkoda", (string text) => CaesarAvkoda(text));
 app.Run();
-
 
 
 
