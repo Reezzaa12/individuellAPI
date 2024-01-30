@@ -4,8 +4,12 @@ var app = builder.Build();
 app.MapGet("/", () => "Hello World!");
 
 app.Run();
+
+
+
+
 //metod som tar emot en sträng och returnerar en krypterad sträng
-static string CaesarKoda(string input)
+static string CaesarKodar(string input)
 {
     //variabel som lagrar nyckeln
     int nyckel = 3;
