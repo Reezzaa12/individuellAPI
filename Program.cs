@@ -40,7 +40,7 @@ static string CaesarKodar(string input)
     }
 
     // Returnera den krypterade strängen
-    return $"{output}";
+    return output;
 }
 
 
