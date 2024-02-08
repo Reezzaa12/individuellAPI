@@ -2,15 +2,10 @@ var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
 
-
-
-
 app.MapGet("/", () => "Individuell API");
 app.MapGet("/koda", (string text) => CaesarKodar(text));
 app.MapGet("/avkoda", (string text) => CaesarAvkoda(text));
 app.Run();
-
-
 
 //metod som tar emot en sträng och returnerar en krypterad sträng
 static string CaesarKodar(string input)
