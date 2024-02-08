@@ -1,4 +1,11 @@
+using Microsoft.AspNetCore.Mvc.Formatters.Xml;
+
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddCors(policyBuilder =>
+    policyBuilder.AddDefaultPolicy(policy =>
+        policy.WithOrigins("*").AllowAnyHeader().AllowAnyHeader())
+);
+
 var app = builder.Build();
 
 
@@ -40,7 +47,7 @@ static string CaesarKodar(string input)
     }
 
     // Returnera den krypterade strängen
-    return output;
+    return output.ToString();
 }
 
 
@@ -81,5 +88,5 @@ static string CaesarAvkoda(string input)
     }
 
     // Returnera den avkrypterade strängen
-    return output;
+    return output.ToString();
 }
