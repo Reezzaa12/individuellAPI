@@ -30,8 +30,8 @@ jobs:
         with:
           aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID2}}
           aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY2 }}
-          application_name: IndividuellAPI
-          environment_name: IndividuellAPI-env
+          application_name: CeasarAPI
+          environment_name: CeasarAPI-env
           version_label: ${{ github.run_id }}
           region: eu-north-1
           deployment_package: site.zip
