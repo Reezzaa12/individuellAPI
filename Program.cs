@@ -47,7 +47,7 @@ static string CaesarKodar(string input)
     }
 
     // Returnera den krypterade strängen
-    return output.ToString();
+    return $"Nya texten är:{output}";
 }
 
 
@@ -88,5 +88,5 @@ static string CaesarAvkoda(string input)
     }
 
     // Returnera den avkrypterade strängen
-    return output.ToString();
+    return $" Nya texten är:{output}";
 }
